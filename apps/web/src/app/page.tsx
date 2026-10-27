@@ -85,7 +85,7 @@ export default async function Home() {
             Full roster →
           </Link>
         </SectionHeading>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {crew.map((m) => (
             <CrewCard key={m.name} member={m} />
           ))}

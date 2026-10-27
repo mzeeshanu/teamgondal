@@ -16,7 +16,7 @@ export default async function DriversPage() {
       <h1 className="font-display text-4xl font-black italic">Drivers</h1>
       <p className="mt-2 text-muted">The people who race under the Team Gondal colors.</p>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
+      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {crew.map((m) => (
           <CrewCard key={m.name} member={m} />
         ))}

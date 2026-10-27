@@ -54,6 +54,15 @@ export const crew: CrewMember[] = [
     initials: "SZ",
     links: [{ platform: "instagram", href: "https://www.instagram.com/saifullah_dev", label: "Instagram" }],
   },
+  {
+    name: "Wheelman",
+    handle: "@Wheelman_racing",
+    role: "Crew",
+    bio: "All about sim racing. Nürburgring hot laps in Assetto Corsa, ACC and Forza on a Logitech RS50.",
+    avatar: "/crew/wheelman.jpg",
+    initials: "WM",
+    links: [{ platform: "youtube", href: "https://www.youtube.com/@Wheelman_racing", label: "YouTube" }],
+  },
 ];
 
 /** Discord servers to showcase. Name and icon are looked up live from the invite. */
@@ -84,7 +93,7 @@ export const crewVideos: CrewVideo[] = [
   { id: "alp4DWTnvw8", title: "F1 traffic run on SRP! Night chase with Ali, Asim & Hassan", by: "techyGondal" },
   { id: "ibGM4G9xGK4", title: "Honda NSX - French Alps | Assetto Corsa", by: "Elite Automotive Club", views: "2.4K" },
   { id: "e-rWNEzdRwY", title: "The crew drives the most scenic mountain road in Assetto Corsa", by: "techyGondal" },
-  { id: "3RzVa54Orwk", title: "Top 5 maps with traffic: Assetto Corsa 2025", by: "Elite Automotive Club" },
+  { id: "mY6PdFoxcow", title: "Assetto Corsa Competizione: Nürburgring GP", by: "Wheelman" },
 ];
 
 export const games = [
