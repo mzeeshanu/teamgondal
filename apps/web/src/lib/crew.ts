@@ -48,11 +48,15 @@ export const crew: CrewMember[] = [
   },
   {
     name: "Saifullah Zubair",
-    handle: "@saifullah_dev",
+    handle: "@SimNStreet",
     role: "Crew",
-    bio: "Sim racer and drifter from Pakistan. Real world is the dream; follow the journey.",
+    bio: "Sim racer and drifter from Pakistan. Sim And Street: drifting on a Moza R12, karting and street drives.",
+    avatar: "/crew/simnstreet.jpg",
     initials: "SZ",
-    links: [{ platform: "instagram", href: "https://www.instagram.com/saifullah_dev", label: "Instagram" }],
+    links: [
+      { platform: "youtube", href: "https://www.youtube.com/@SimNStreet", label: "YouTube" },
+      { platform: "instagram", href: "https://www.instagram.com/saifullah_dev", label: "Instagram" },
+    ],
   },
   {
     name: "Wheelman",
