@@ -21,10 +21,17 @@ export type Driver = {
   joinedAt: string;
 };
 
-/** Returns null when the API cannot be reached, so pages can show a friendly state. */
+/**
+ * Returns null when the API cannot be reached, so pages can show a friendly state.
+ * The timeout matters at build time: Railway's private network is not reachable
+ * during builds, so prerendering would otherwise hang until Next.js gives up.
+ */
 async function get<T>(path: string): Promise<T | null> {
   try {
-    const res = await fetch(`${API_URL}${path}`, { next: { revalidate: 60 } });
+    const res = await fetch(`${API_URL}${path}`, {
+      next: { revalidate: 60 },
+      signal: AbortSignal.timeout(5000),
+    });
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {

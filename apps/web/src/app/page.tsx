@@ -4,6 +4,9 @@ import { EventCard } from "@/components/EventCard";
 import { api } from "@/lib/api";
 import { site } from "@/lib/site";
 
+// Prerendered without data at build time; refreshed from the API at runtime.
+export const revalidate = 60;
+
 export default async function Home() {
   const events = (await api.upcomingEvents())?.slice(0, 3) ?? [];
 

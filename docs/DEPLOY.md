@@ -1,6 +1,6 @@
 # Deploying to Railway
 
-One Railway project, three services. Each app has a `railway.json` next to it, so build and deploy settings live in the repo.
+One Railway project, three services. Each app has a `railway.json` next to it describing its build and deploy settings. Railway no longer accepts `railway.json` (config as code) on new services, so those settings are applied in the service settings instead; the files remain as the reference. Migrating to `.railway/railway.ts` (infrastructure as code) is on the roadmap.
 
 ## One time setup
 
@@ -8,7 +8,7 @@ One Railway project, three services. Each app has a `railway.json` next to it, s
 2. **Add Postgres:** New → Database → PostgreSQL.
 3. **Add the API:** New → GitHub Repo → `teamgondal`.
    * Settings → Root Directory: `apps/api`
-   * Settings → Config file path: `/apps/api/railway.json`
+   * Settings: Dockerfile path `Dockerfile`, watch path `/apps/api/**`, healthcheck `/health`
    * Variables:
      * `DATABASE_URL` = `${{Postgres.DATABASE_URL}}`
      * `ADMIN_API_KEY` = a long random string (keep it secret)
@@ -16,7 +16,7 @@ One Railway project, three services. Each app has a `railway.json` next to it, s
    * Rename the service to `api`. No public domain needed yet.
 4. **Add the web app:** New → GitHub Repo → `teamgondal` again.
    * Settings → Root Directory: `apps/web`
-   * Settings → Config file path: `/apps/web/railway.json`
+   * Settings: build `npm run build`, start `npm run start`, watch path `/apps/web/**`, healthcheck `/`
    * Variables:
      * `API_URL` = `http://${{api.RAILWAY_PRIVATE_DOMAIN}}:${{api.PORT}}`
      * `NEXT_PUBLIC_SITE_URL` = `https://teamgondal.com`
