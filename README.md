@@ -12,6 +12,8 @@ The home of **Team Gondal**, the sim racing community from [techyGondal](https:/
 
 Everything deploys to [Railway](https://railway.com) as one project with three services: `web`, `api` and `postgres`. See [docs/DEPLOY.md](docs/DEPLOY.md).
 
+The crew, their channels, the featured videos and the Discord servers on the home page are hand edited in `apps/web/src/lib/crew.ts` (avatars go in `apps/web/public/crew`). Discord server names and icons are read live from each invite. The Elite Automotive Club invite can be swapped without a code change by setting `NEXT_PUBLIC_ELITE_DISCORD_INVITE` on the web service.
+
 ## Run it locally
 
 Requirements: Node 22+, .NET 10 SDK, Docker (for Postgres).

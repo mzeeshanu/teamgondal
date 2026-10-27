@@ -13,18 +13,12 @@ export default function JoinPage() {
         Everything happens on Discord: race night announcements, server details, setups and results. All skill levels
         welcome. Race clean and respect your fellow drivers.
       </p>
-      {site.discordInvite ? (
-        <a
-          href={site.discordInvite}
-          className="mt-8 inline-block rounded-md bg-electric px-6 py-3 font-bold text-white hover:bg-blue-500"
-        >
-          Join the Discord
-        </a>
-      ) : (
-        <p className="mt-8 rounded-xl border border-dashed border-line p-6 text-muted">
-          The Discord invite link is coming soon.
-        </p>
-      )}
+      <a
+        href={site.discordInvite}
+        className="mt-8 inline-block rounded-md bg-electric px-6 py-3 font-bold text-white hover:bg-blue-500"
+      >
+        Join the Discord
+      </a>
       <h2 className="font-display mt-12 text-2xl font-extrabold">What you need</h2>
       <ul className="mt-4 list-disc space-y-2 pl-6 text-muted">
         <li>Assetto Corsa with Content Manager and Custom Shaders Patch</li>

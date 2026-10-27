@@ -1,4 +1,13 @@
+import { PlatformIcon, platformHover } from "./PlatformIcon";
+import type { Platform } from "@/lib/crew";
 import { site } from "@/lib/site";
+
+const follow: { platform: Platform; href: string; label: string }[] = [
+  { platform: "discord", href: site.discordInvite, label: "Discord" },
+  { platform: "youtube", href: site.links.youtube, label: "YouTube" },
+  { platform: "instagram", href: site.links.instagram, label: "Instagram" },
+  { platform: "tiktok", href: site.links.tiktok, label: "TikTok" },
+];
 
 export function SiteFooter() {
   return (
@@ -12,10 +21,21 @@ export function SiteFooter() {
           </a>{" "}
           community.
         </p>
-        <ul className="flex flex-wrap gap-4">
-          <li><a className="hover:text-white" href={site.links.youtube}>YouTube</a></li>
-          <li><a className="hover:text-white" href={site.links.instagram}>Instagram</a></li>
-          <li><a className="hover:text-white" href={site.links.tiktok}>TikTok</a></li>
+        <ul className="flex flex-wrap gap-2">
+          {follow.map((f) => (
+            <li key={f.platform}>
+              <a
+                href={f.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={f.label}
+                title={f.label}
+                className={`grid h-9 w-9 place-items-center rounded-full border border-line transition ${platformHover[f.platform]}`}
+              >
+                <PlatformIcon name={f.platform} className="h-4 w-4" />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>
