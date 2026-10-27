@@ -5,7 +5,7 @@
 - [x] API with events and drivers, Postgres, health checks, tests
 - [x] CI on GitHub Actions, Railway config as code
 - [ ] Deploy to Railway and connect teamgondal.com
-- [ ] Discord invite link on the Join page
+- [x] Discord invite link on the Join page
 
 ## Phase 2: Members
 - [ ] Sign in with Discord (OAuth) on the web app
