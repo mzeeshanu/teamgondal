@@ -34,6 +34,18 @@ export const crew: CrewMember[] = [
     ],
   },
   {
+    name: "Yusiverse",
+    handle: "@Yusiverse.Official",
+    role: "Crew",
+    bio: "Yusuf's world of gaming and sim racing. Father vs son races on No Hesi, SRP and the Nordschleife.",
+    avatar: "/crew/yusiverse.jpg",
+    initials: "YU",
+    links: [
+      { platform: "youtube", href: "https://www.youtube.com/@Yusiverse.Official", label: "YouTube" },
+      { platform: "instagram", href: "https://www.instagram.com/yusiverse.official", label: "Instagram" },
+    ],
+  },
+  {
     name: "Elite Automotive Club",
     handle: "@PsykoPak",
     role: "Crew",
@@ -96,7 +108,7 @@ export const crewVideos: CrewVideo[] = [
   { id: "lDl1gABi2Bk", title: "Skeler - Code Red | Assetto Corsa", by: "Elite Automotive Club", views: "4.4K" },
   { id: "alp4DWTnvw8", title: "F1 traffic run on SRP! Night chase with Ali, Asim & Hassan", by: "techyGondal" },
   { id: "ibGM4G9xGK4", title: "Honda NSX - French Alps | Assetto Corsa", by: "Elite Automotive Club", views: "2.4K" },
-  { id: "e-rWNEzdRwY", title: "The crew drives the most scenic mountain road in Assetto Corsa", by: "techyGondal" },
+  { id: "-MeLXTewr0o", title: "I learned the Nordschleife in just 2 laps! McLaren W1 with my dad", by: "Yusiverse" },
   { id: "mY6PdFoxcow", title: "Assetto Corsa Competizione: Nürburgring GP", by: "Wheelman" },
 ];
 
